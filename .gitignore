@@ -15,6 +15,13 @@ _ss_environment.php
 /cms/
 /betterbuttons/
 /framework/
+themes/klosterhof/develop/node_modules/
 
 # ignore IDE folders
 /.idea/
+
+#ignore useless files
+/npm-debug.log
+/composer.lock
+/install.php
+/install-frameworkmissing.html
