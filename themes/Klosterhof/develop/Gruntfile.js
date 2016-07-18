@@ -82,7 +82,7 @@ module.exports = function(grunt) {
                     filter: 'isFile',
                     flatten: true,
                     src: '<%= config.node_modules %>/bootstrap/dist/css/bootstrap.min.css',
-                    dest: '../css'
+                    dest: 'css'
                 },{
                     expand: true,
                     filter: 'isFile',
