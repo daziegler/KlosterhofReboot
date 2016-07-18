@@ -76,7 +76,7 @@ module.exports = function(grunt) {
                     filter: 'isFile',
                     flatten: true,
                     src: '<%= config.node_modules %>/jquery/dist/jquery.min.js',
-                    dest: 'js'
+                    dest: '../js'
                 },{
                     expand: true,
                     filter: 'isFile',
