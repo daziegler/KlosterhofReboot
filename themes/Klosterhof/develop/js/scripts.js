@@ -4,5 +4,5 @@
 
 $("#toggleOpeningHours").click(
     function(){
-    $("#OpeningHoursBody").toggle("slow");
+    $("#OpeningHoursBody").toggle();
 });

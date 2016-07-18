@@ -38,7 +38,9 @@ class Page_Controller extends ContentController {
 		Requirements::css($basedir."/css/theme.min.css");
 		Requirements::css($basedir."/css/vendor.min.css");
 
+        //Dev Requirements, To be deleted
 		Requirements::css($basedir. "develop/css/theme.css");
+        Requirements::css($basedir. "develop/js/scripts.js");
 	}
 
 }

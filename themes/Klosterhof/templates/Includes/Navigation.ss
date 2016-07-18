@@ -6,7 +6,10 @@
             </li>
         <% end_loop %>
         <li>
-            <% include OpeningHours %>
+            <a href="#" id="toggleOpeningHours" ><%t Misc.OpeningHours "Öffnungszeiten" %></a>
         </li>
     </ul>
+    <div data-uk-sticky>
+        <% include OpeningHours %>
+    </div>
 </nav>

@@ -15,7 +15,7 @@
 </head>
 <body>
     <% include Navigation %>
-    <div>
+    <div class="container-fluid">
         $Layout
     </div>
 

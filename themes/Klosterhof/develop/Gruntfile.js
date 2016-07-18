@@ -13,15 +13,12 @@ module.exports = function(grunt) {
             scripts_build: ['../js'],
             styles: ['css'],
             styles_build: ['../css'],
-            vendorStyles: ['css/bootstrap.min.css', 'css/uikit.min.css'],
-            vendorScripts: ['js/bootstrap.min.js', 'js/uikit.min.js']
+            vendorStyles: ['css/bootstrap.min.css', 'css/uikit.css', 'css/sticky.css'],
+            vendorScripts: ['js/bootstrap.min.js', 'js/uikit.js', 'js/sticky.js']
         },
         uglify: {
             options: {
                 banner: '/* <%= pkg.name %> <%= pkg.version %> <%= grunt.template.today("isoDateTime") %> - This line was generated automatically. Do not remove. */\n'
-            },
-            vendor: {
-
             },
             build: {
                 files: {
@@ -75,12 +72,6 @@ module.exports = function(grunt) {
                     expand: true,
                     filter: 'isFile',
                     flatten: true,
-                    src: '<%= config.node_modules %>/jquery/dist/jquery.min.js',
-                    dest: '../js'
-                },{
-                    expand: true,
-                    filter: 'isFile',
-                    flatten: true,
                     src: '<%= config.node_modules %>/bootstrap/dist/css/bootstrap.min.css',
                     dest: 'css'
                 },{
@@ -93,8 +84,47 @@ module.exports = function(grunt) {
                     expand: true,
                     filter: 'isFile',
                     flatten: true,
+                    src: '<%= config.node_modules %>/uikit/js/uikit.js',
+                    dest: 'js'
+                },{
+                    expand: true,
+                    filter: 'isFile',
+                    flatten: true,
+                    src: '<%= config.node_modules %>/uikit/css/uikit.css',
+                    dest: 'css'
+                },{
+                    expand: true,
+                    filter: 'isFile',
+                    flatten: true,
+                    src: '<%= config.node_modules %>/uikit/js/components/sticky.js',
+                    dest: 'js'
+                },{
+                    expand: true,
+                    filter: 'isFile',
+                    flatten: true,
+                    src: '<%= config.node_modules %>/uikit/css/components/sticky.css',
+                    dest: 'css'
+                }]
+            },
+            vendor: {
+                files: [{
+                    expand: true,
+                    filter: 'isFile',
+                    flatten: true,
+                    src: '<%= config.node_modules %>/jquery/dist/jquery.min.js',
+                    dest: '../js'
+                },{
+                    expand: true,
+                    filter: 'isFile',
+                    flatten: true,
                     src: '<%= config.node_modules %>/js/vendor.min.js',
                     dest: '../js'
+                },{
+                    expand: true,
+                    filter: 'isFile',
+                    flatten: true,
+                    src: '<%= config.node_modules %>/css/vendor.min.css',
+                    dest: '../css'
                 }]
             }
         }
@@ -107,6 +137,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-bowercopy');
 
     grunt.registerTask('default', ['']);
-    grunt.registerTask('build', ['bowercopy','uglify','less','cssmin','copy']);
+    grunt.registerTask('build', ['bowercopy', 'copy:build','uglify','less','cssmin','copy:vendor']);
     grunt.registerTask('styles', ['less','cssmin']);
 };
