@@ -17,25 +17,19 @@
     <!-- Bootstrap Core CSS -->
     <% require ThemedCSS("bootstrap.min") %>
 
-    <!-- Vendor CSS -->
-    <% require ThemedCSS("vendor.min") %>
-
     <title>$SiteConfig.Title - $Title - $SiteConfig.Tagline</title>
 </head>
 <body>
-
     <% include Navigation %>
-<div>
-    $Layout
-</div>
+    <div>
+        $Layout
+    </div>
 
 <!-- jQuery Javascript -->
     <% require javascript("themes/Klosterhof/js/jquery.min.js") %>
 <!-- Bootstrap Javascript -->
     <% require javascript("themes/Klosterhof/js/bootstrap.min.js") %>
-<!-- All Vendor Javascript Files -->
-    <% require javascript("themes/Klosterhof/js/vendor.min.js") %>
 <!-- Custom Javascript -->
-    <% require javascript("themes/Klosterhof/js/script.js") %>
+    <% require javascript("themes/Klosterhof/develop/js/scripts.js") %>
 </body>
 </html>

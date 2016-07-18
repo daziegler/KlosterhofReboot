@@ -9,3 +9,14 @@ After:
 # Caution: Indentation through two spaces, not tabs
 SSViewer:
   theme: 'Klosterhof'
+File:
+  extensions:
+    - MyFile
+SiteConfig:
+  extensions:
+    - OpeningHours
+Image:
+  extensions:
+    - MyImage
+Currency:
+  currency_symbol: "€"
