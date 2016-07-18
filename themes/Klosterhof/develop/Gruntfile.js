@@ -13,21 +13,20 @@ module.exports = function(grunt) {
             scripts_build: ['../js'],
             styles: ['css'],
             styles_build: ['../css'],
-            vendorStyles: [],
-            vendorScripts: []
+            vendorStyles: ['css/bootstrap.min.css', 'css/uikit.min.css'],
+            vendorScripts: ['js/bootstrap.min.js', 'js/uikit.min.js']
         },
         uglify: {
             options: {
                 banner: '/* <%= pkg.name %> <%= pkg.version %> <%= grunt.template.today("isoDateTime") %> - This line was generated automatically. Do not remove. */\n'
             },
             vendor: {
-                files: {
-                    '../js/vendor.min.js': '<%= config.vendorScripts %>'
-                }
+
             },
             build: {
                 files: {
-                    '<%= config.scripts_build %>/scripts.min.js': ['<%= config.scripts %>/scripts.js']
+                    '<%= config.scripts_build %>/scripts.min.js': ['<%= config.scripts %>/scripts.js'],
+                    '<%= config.scripts_build %>/vendor.min.js': '<%= config.vendorScripts %>'
                 }
             }
         },
@@ -36,14 +35,10 @@ module.exports = function(grunt) {
                 banner: '/* <%= pkg.name %> <%= pkg.version %> <%= grunt.template.today("isoDateTime") %> - This line was generated automatically. Do not remove. */',
                 keepSpecialComments: 0
             },
-            vendor: {
-                files: {
-                    '../css/vendor.min.css': '<%= config.vendorStyles %>'
-                }
-            },
             build: {
                 files: {
-                    '<%= config.styles_build %>/theme.min.css': ['<%= config.styles %>/theme.css']
+                    '<%= config.styles_build %>/theme.min.css': ['<%= config.styles %>/theme.css'],
+                    '<%= config.styles_build %>/vendor.min.css': '<%= config.vendorStyles %>'
                 }
             }
         },
@@ -57,6 +52,23 @@ module.exports = function(grunt) {
                 }
             }
         },
+        bowercopy: {
+            options: {
+                srcPrefix: 'bower_components',
+                clean: true
+            },
+            vendor: {
+                options: {
+                    destPrefix: 'node_modules'
+                },
+                files: {
+                    'uikit/css': 'uikit/css',
+                    'uikit/fonts': 'uikit/fonts',
+                    'uikit/js': 'uikit/js',
+                    'uikit/less': 'uikit/less',
+                }
+            }
+        },
         copy: {
             build: {
                 files: [{
@@ -64,7 +76,7 @@ module.exports = function(grunt) {
                     filter: 'isFile',
                     flatten: true,
                     src: '<%= config.node_modules %>/jquery/dist/jquery.min.js',
-                    dest: '../js'
+                    dest: 'js'
                 },{
                     expand: true,
                     filter: 'isFile',
@@ -75,7 +87,13 @@ module.exports = function(grunt) {
                     expand: true,
                     filter: 'isFile',
                     flatten: true,
-                    src: '<%= config.node_modules %>bootstrap/dist/js/bootstrap.min.js',
+                    src: '<%= config.node_modules %>/bootstrap/dist/js/bootstrap.min.js',
+                    dest: 'js'
+                },{
+                    expand: true,
+                    filter: 'isFile',
+                    flatten: true,
+                    src: '<%= config.node_modules %>/js/vendor.min.js',
                     dest: '../js'
                 }]
             }
@@ -86,8 +104,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-bowercopy');
 
     grunt.registerTask('default', ['']);
-    grunt.registerTask('build', ['uglify','less','cssmin','copy']);
+    grunt.registerTask('build', ['bowercopy','uglify','less','cssmin','copy']);
     grunt.registerTask('styles', ['less','cssmin']);
 };

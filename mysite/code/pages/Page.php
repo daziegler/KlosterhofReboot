@@ -35,11 +35,10 @@ class Page_Controller extends ContentController {
 		Requirements::javascript($basedir."/js/scripts.min.js");
 		Requirements::javascript($basedir."/js/vendor.min.js");
 
-		Requirements::css($basedir."/css/bootstrap.min.css");
 		Requirements::css($basedir."/css/theme.min.css");
 		Requirements::css($basedir."/css/vendor.min.css");
 
-		//Requirements::css($basedir. "develop/css/theme.css");
+		Requirements::css($basedir. "develop/css/theme.css");
 	}
 
 }

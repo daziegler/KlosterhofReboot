@@ -1,0 +1,6 @@
+{
+  "name": "ba-dev",
+  "dependencies": {
+    "uikit": "~2.26.0"
+  }
+}

@@ -1,5 +1,5 @@
 <div> <!-- Add Wrapper -->
-    <Button id="toggleOpeningHours" class="btn btn-default"><%t Misc.OpeningHours "Öffnungszeiten" %></Button> <!-- Add Toggle -->
+    <a href="#" id="toggleOpeningHours" ><%t Misc.OpeningHours "Öffnungszeiten" %></a> <!-- Add Toggle -->
 
     <div id="OpeningHoursBody"> <!-- OpeningHours Body -->
         <h4><%t Misc.OpeningHoursAre "Unsere Öffnungszeiten" %>:</h4>
