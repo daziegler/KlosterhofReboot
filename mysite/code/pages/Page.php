@@ -30,17 +30,16 @@ class Page_Controller extends ContentController {
 
 	public function init() {
 		parent::init();
-		$basedir="themes/Klosterhof";
-		Requirements::javascript($basedir."/js/jquery.min.js");
-		Requirements::javascript($basedir."/js/scripts.min.js");
-		Requirements::javascript($basedir."/js/vendor.min.js");
+		Requirements::javascript($this->ThemeDir()."/js/jquery.min.js");
+		Requirements::javascript($this->ThemeDir()."/js/scripts.min.js");
+		Requirements::javascript($this->ThemeDir()."/js/vendor.min.js");
 
-		Requirements::css($basedir."/css/theme.min.css");
-		Requirements::css($basedir."/css/vendor.min.css");
+		Requirements::css($this->ThemeDir()."/css/theme.min.css");
+		Requirements::css($this->ThemeDir()."/css/vendor.min.css");
 
         //Dev Requirements, To be deleted
-		Requirements::css($basedir. "develop/css/theme.css");
-        Requirements::css($basedir. "develop/js/scripts.js");
+		Requirements::css($this->ThemeDir()."develop/css/theme.css");
+        Requirements::css($this->ThemeDir()."develop/js/scripts.js");
 	}
 
 }
