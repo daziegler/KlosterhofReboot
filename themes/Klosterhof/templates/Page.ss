@@ -11,12 +11,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
 
-    <!-- Custom CSS -->
-    <% require ThemedCSS("theme.min") %>
-
-    <!-- Bootstrap Core CSS -->
-    <% require ThemedCSS("bootstrap.min") %>
-
     <title>$SiteConfig.Title - $Title - $SiteConfig.Tagline</title>
 </head>
 <body>
@@ -25,11 +19,5 @@
         $Layout
     </div>
 
-<!-- jQuery Javascript -->
-    <% require javascript("themes/Klosterhof/js/jquery.min.js") %>
-<!-- Bootstrap Javascript -->
-    <% require javascript("themes/Klosterhof/js/bootstrap.min.js") %>
-<!-- Custom Javascript -->
-    <% require javascript("themes/Klosterhof/develop/js/scripts.js") %>
 </body>
 </html>

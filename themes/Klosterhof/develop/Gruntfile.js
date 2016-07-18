@@ -49,13 +49,12 @@ module.exports = function(grunt) {
         },
         less: {
             develop: {
-                files: [{
-                    expand: true,
-                    cwd: 'styles',
-                    src: ['*.less'],
-                    dest: 'styles',
-                    ext: '.css'
-                }]
+                options: {
+                    paths: ['<%= config.styles %>']
+                },
+                files: {
+                    '<%= config.styles %>/theme.css': '<%= config.styles %>/theme.less'
+                }
             }
         },
         copy: {
