@@ -14,7 +14,7 @@ module.exports = function(grunt) {
             styles: ['css'],
             styles_build: ['../css'],
             vendorStyles: ['css/bootstrap.min.css', 'css/uikit.css', 'css/sticky.css'],
-            vendorScripts: ['js/bootstrap.min.js', 'js/uikit.js', 'js/sticky.js']
+            vendorScripts: ['js/bootstrap.min.js', 'js/uikit.js', 'js/sticky.js', 'js/lightbox.js']
         },
         uglify: {
             options: {
@@ -104,10 +104,13 @@ module.exports = function(grunt) {
                     flatten: true,
                     src: '<%= config.node_modules %>/uikit/css/components/sticky.css',
                     dest: 'css'
-                }]
-            },
-            vendor: {
-                files: [{
+                },{
+                    expand: true,
+                    filter: 'isFile',
+                    flatten: true,
+                    src: '<%= config.node_modules %>/uikit/js/components/lightbox.js',
+                    dest: 'js'
+                },{
                     expand: true,
                     filter: 'isFile',
                     flatten: true,
@@ -117,14 +120,26 @@ module.exports = function(grunt) {
                     expand: true,
                     filter: 'isFile',
                     flatten: true,
-                    src: '<%= config.node_modules %>/js/vendor.min.js',
-                    dest: '../js'
+                    src: '<%= config.node_modules %>/uikit/fonts/FontAwesome.otf',
+                    dest: '../fonts'
                 },{
                     expand: true,
                     filter: 'isFile',
                     flatten: true,
-                    src: '<%= config.node_modules %>/css/vendor.min.css',
-                    dest: '../css'
+                    src: '<%= config.node_modules %>/uikit/fonts/fontawesome-webfont.ttf',
+                    dest: '../fonts'
+                },{
+                    expand: true,
+                    filter: 'isFile',
+                    flatten: true,
+                    src: '<%= config.node_modules %>/uikit/fonts/fontawesome-webfont.woff',
+                    dest: '../fonts'
+                },{
+                    expand: true,
+                    filter: 'isFile',
+                    flatten: true,
+                    src: '<%= config.node_modules %>/uikit/fonts/fontawesome-webfont.woff2',
+                    dest: '../fonts'
                 }]
             }
         }
@@ -137,6 +152,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-bowercopy');
 
     grunt.registerTask('default', ['']);
-    grunt.registerTask('build', ['bowercopy', 'copy:build','uglify','less','cssmin','copy:vendor']);
+    grunt.registerTask('build', ['bowercopy', 'copy','uglify','less','cssmin']);
     grunt.registerTask('styles', ['less','cssmin']);
 };
