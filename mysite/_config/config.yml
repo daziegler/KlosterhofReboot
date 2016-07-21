@@ -15,6 +15,7 @@ File:
 SiteConfig:
   extensions:
     - OpeningHours
+    - ContactData
 Image:
   extensions:
     - MyImage
