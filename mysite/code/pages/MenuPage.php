@@ -12,8 +12,7 @@ class MenuPage extends Page{
         'DownloadableMenus' => 'File'
     );
 
-    public function getCMSFields()
-    {
+    public function getCMSFields(){
         $fields = parent::getCMSFields();
 
         $fields->removeByName('Content');

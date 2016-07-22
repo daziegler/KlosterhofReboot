@@ -15,7 +15,8 @@ _ss_environment.php
 /cms/
 /betterbuttons/
 /framework/
-themes/klosterhof/develop/node_modules/
+/themes/Klosterhof/develop/bower_components/
+/themes/Klosterhof/develop/node_modules/
 
 # ignore IDE folders
 /.idea/
