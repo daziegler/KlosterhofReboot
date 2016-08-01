@@ -17,6 +17,8 @@ _ss_environment.php
 /framework/
 /themes/Klosterhof/develop/bower_components/
 /themes/Klosterhof/develop/node_modules/
+/reports/
+/siteconfig/
 
 # ignore IDE folders
 /.idea/

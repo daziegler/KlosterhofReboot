@@ -1,3 +1,12 @@
+.adminLogin {
+  align-content: center;
+}
+.adminLogin .checkbox input[type="checkbox"],
+.adminLogin .checkbox-inline input[type="checkbox"],
+.adminLogin .radio input[type="radio"],
+.adminLogin .radio-inline input[type="radio"] {
+  margin-left: 0px;
+}
 #OpeningHoursBody {
   display: none;
   float: right;
