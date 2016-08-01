@@ -4,7 +4,7 @@ global $project;
 $project = 'Klosterhof';
 
 global $database;
-$database = 'SS_klosterhof';
+$database = 'klosterhof';
 
 require_once('conf/ConfigureFromEnv.php');
 
