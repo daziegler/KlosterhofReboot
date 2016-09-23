@@ -1,5 +1,63 @@
-.adminLogin {
-  align-content: center;
+header {
+  background-color: #000;
+}
+header .header {
+  border-bottom: 10px solid #D7B84E;
+}
+header .bannerHolder {
+  height: 410px;
+  border-bottom: 10px solid #D7B84E;
+}
+header div > div > nav > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-size: 20px;
+}
+header li {
+  float: left;
+  width: 25%;
+}
+header li.active {
+  background-color: #0071BC;
+}
+header li a {
+  text-align: center;
+  display: block;
+  height: 80px;
+  line-height: 80px;
+  color: white;
+  text-decoration: none;
+}
+header li a:hover,
+header li a:visited,
+header li a:focus {
+  text-decoration: none;
+}
+header li a:hover {
+  background-color: #0a9dff;
+}
+footer {
+  background-color: #D7B84E;
+  height: 35px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+footer div > div {
+  text-align: center;
+  line-height: 35px;
+}
+footer div > div.impressum {
+  font-size: 20px;
+}
+footer div > div.copyright {
+  font-size: 10px;
+}
+div > div > .content {
+  margin-top: 25px;
+  padding-bottom: 60px;
 }
 .adminLogin .checkbox input[type="checkbox"],
 .adminLogin .checkbox-inline input[type="checkbox"],

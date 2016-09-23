@@ -5,7 +5,22 @@ class Page extends SiteTree {
 	);
 
 	private static $has_one = array(
+	    'BannerImage' => 'Image'
 	);
+
+    function getCMSFields() {
+
+        $fields = parent::getCMSFields();
+
+        $fields->addFieldToTab(
+            'Root.Upload',
+            $uploadField = new UploadField(
+                $name = 'BannerImage',
+                $title = 'Hier kann das Banner für den Header hochgeladen werden.'
+            )
+        );
+        return $fields;
+    }
 
 }
 class Page_Controller extends ContentController {

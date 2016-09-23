@@ -14,10 +14,10 @@
     <title>$SiteConfig.Title - $Title - $SiteConfig.Tagline</title>
 </head>
 <body>
-    <% include Navigation %>
+    <% include Header %>
     <div class="container-fluid">
         $Layout
     </div>
-
+    <% include Footer %>
 </body>
 </html>

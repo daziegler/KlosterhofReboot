@@ -8,6 +8,7 @@
  */
 class MyImage extends DataExtension{
     private static $belongs_to = array(
+        'Page' => 'Page',
         'Article' => 'Article',
         'ContactPage' => 'ContactPage'
     );

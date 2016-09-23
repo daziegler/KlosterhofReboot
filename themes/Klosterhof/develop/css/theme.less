@@ -1,9 +1,106 @@
-@desktop:       ~"only screen and (min-width: 992px)";
-@tablet:		~"only screen and (min-width: 768px) and (max-width: 991px)";
-@smartphone:	~"only screen and (max-width: 767px)";
-@smartphoneL:   ~"only screen and (min-width: 480px) and (max-width: 767px)";
-@smartphoneP:   ~"only screen and (min-width: 320px) and (max-width: 479px)";
+@desktop: ~"only screen and (min-width: 992px)";
+@tablet: ~"only screen and (min-width: 768px) and (max-width: 991px)";
+@smartphone: ~"only screen and (max-width: 767px)";
+@smartphoneL: ~"only screen and (min-width: 480px) and (max-width: 767px)";
+@smartphoneP: ~"only screen and (min-width: 320px) and (max-width: 479px)";
 
+@lightgrey: #E6E6E6;
+@darkgrey: #181818;
+@yellow: #D7B84E;
+@blue: #0071BC;
+
+@footer-height: 35px;
+
+.space-out(@min, @max) {
+  .space-out-loop(@i) when (@i > 0) {
+    .space-out-loop(@i - 1);
+    &:first-child:nth-last-child(@{i}),
+    &:first-child:nth-last-child(@{i}) ~ & {
+      width: 1 / @i * 100%;
+    }
+  }
+  .space-out-loop(@max);
+}
+
+//Header Font: Trajan Pro
+//Content Font: Lato Light
+
+// Header
+header {
+  background-color: #000;
+
+  .header {
+    border-bottom: 10px solid @yellow;
+  }
+
+  .bannerHolder{
+    height: 410px;
+    border-bottom: 10px solid @yellow;
+  }
+
+  div > div > nav > ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      font-size: 20px;
+    }
+
+    li {
+      float: left;
+      width: 25%;
+
+      &.active{
+        background-color: @blue;
+      }
+
+      a {
+        text-align: center;
+        display: block;
+        height: 80px;
+        line-height: 80px;
+        color: white;
+        text-decoration: none;
+
+        &:hover, &:visited, &:focus{
+          text-decoration: none;
+        }
+
+        &:hover{
+          background-color: lighten(@blue, 15%);
+        }
+      }
+    }
+}
+
+// Footer
+footer{
+  background-color: @yellow;
+  height: @footer-height;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  div > div{
+    text-align: center;
+    line-height: 35px;
+
+    &.impressum{
+      font-size: 20px;
+    }
+    &.copyright{
+      font-size: 10px;
+    }
+  }
+}
+
+// Body
+div > div > .content{
+  margin-top: 25px;
+  padding-bottom: @footer-height + 25px;
+}
+
+// Admin
 .adminLogin {
   .checkbox input[type="checkbox"],
   .checkbox-inline input[type="checkbox"],
@@ -12,8 +109,9 @@
     margin-left: 0px;
   }
 }
-#OpeningHoursBody{
-    display: none;
-    float: right;
+
+#OpeningHoursBody {
+  display: none;
+  float: right;
 }
 

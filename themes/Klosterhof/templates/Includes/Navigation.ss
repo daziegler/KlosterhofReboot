@@ -1,7 +1,7 @@
 <nav>
-    <ul class="list-inline">
+    <ul>
         <% loop $Menu(1) %>
-            <li>
+            <li <% if $isCurrent %>class="active"<% end_if %>>
                 <a class="LinkingMode" href="$Link">$MenuTitle</a>
             </li>
         <% end_loop %>
