@@ -48,7 +48,7 @@ header {
 
     li {
       float: left;
-      width: 25%;
+      width: 20%;
 
       &.active{
         background-color: @blue;
@@ -64,6 +64,7 @@ header {
 
         &:hover, &:visited, &:focus{
           text-decoration: none;
+          color: #fff;
         }
 
         &:hover{
@@ -77,8 +78,6 @@ header {
 footer{
   background-color: @yellow;
   height: @footer-height;
-  position: absolute;
-  bottom: 0;
   width: 100%;
 
   div > div{
@@ -98,6 +97,34 @@ footer{
 div > div > .content{
   margin-top: 25px;
   padding-bottom: @footer-height + 25px;
+}
+
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.Site-content {
+  flex: 1;
+}
+
+// Menu
+.menuCategories {
+}
+
+.menuFileContainer {
+  div > .fileList {
+    margin-top: 25px;
+    list-style-type: none;
+  }
+}
+
+// Contact
+#map {
+  height: 400px;
+  width: 100%;
+  margin: 20px;
 }
 
 // Admin

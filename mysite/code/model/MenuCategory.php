@@ -6,10 +6,12 @@
  * Date: 18.07.2016
  * Time: 13:57
  */
-class MenuCategory extends DataObject{
+class MenuCategory extends DataObject
+{
     private static $db = array(
         'Title' => 'Varchar',
-        'SortOrder'=>'Int'
+        'SortOrder' => 'Int',
+        'Information' => 'Text'
     );
 
     private static $has_one = array(
@@ -25,13 +27,14 @@ class MenuCategory extends DataObject{
 
     private static $default_sort = 'SortOrder';
 
-    public function getCMSFields() {
+    public function getCMSFields()
+    {
         $fields = parent::getCMSFields();;
         $fields->removeByName('MenuPageID');
         $fields->removeByName('MenuEntries');
         $fields->removeByName('SortOrder');
 
-        if($this->ID) {
+        if ($this->ID) {
             $config = GridFieldConfig_RecordEditor::create();
             $config->addComponent(new GridFieldSortableRows('SortOrder'));
             $fields->addFieldToTab('Root.Main', GridField::create('Entries', _t('MenuCategory.Entries', 'Menü-Einträge'), $this->MenuEntries(), $config));
@@ -40,15 +43,18 @@ class MenuCategory extends DataObject{
         return $fields;
     }
 
-    function getCMSValidator() {
+    function getCMSValidator()
+    {
         return new RequiredFields(array('Title'));
     }
 
-    public function getURLTitle() {
+    public function getURLTitle()
+    {
         return Convert::raw2url($this->Title);
     }
 
-    public function fieldLabels($includerelations = true) {
+    public function fieldLabels($includerelations = true)
+    {
         $labels = parent::fieldLabels();
         $labels['Title'] = _t('MenuCategory.JobTitle', 'Name');
 

@@ -13,8 +13,8 @@ module.exports = function(grunt) {
             scripts_build: ['../js'],
             styles: ['css'],
             styles_build: ['../css'],
-            vendorStyles: ['css/bootstrap.min.css', 'css/uikit.css', 'css/sticky.css'],
-            vendorScripts: ['js/bootstrap.min.js', 'js/uikit.js', 'js/sticky.js', 'js/lightbox.js']
+            vendorStyles: ['css/bootstrap.min.css', 'css/uikit.css', 'css/sticky.css', 'css/accordion.css'],
+            vendorScripts: ['js/bootstrap.min.js', 'js/uikit.js', 'js/sticky.js', 'js/accordion.js', 'js/lightbox.js']
         },
         uglify: {
             options: {
@@ -97,6 +97,18 @@ module.exports = function(grunt) {
                     filter: 'isFile',
                     flatten: true,
                     src: '<%= config.node_modules %>/uikit/js/components/sticky.js',
+                    dest: 'js'
+                }, {
+                    expand: true,
+                    filter: 'isFile',
+                    flatten: true,
+                    src: '<%= config.node_modules %>/uikit/css/components/accordion.css',
+                    dest: 'css'
+                }, {
+                    expand: true,
+                    filter: 'isFile',
+                    flatten: true,
+                    src: '<%= config.node_modules %>/uikit/js/components/accordion.js',
                     dest: 'js'
                 },{
                     expand: true,

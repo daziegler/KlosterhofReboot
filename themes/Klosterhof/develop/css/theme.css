@@ -17,7 +17,7 @@ header div > div > nav > ul {
 }
 header li {
   float: left;
-  width: 25%;
+    width: 20%;
 }
 header li.active {
   background-color: #0071BC;
@@ -34,6 +34,7 @@ header li a:hover,
 header li a:visited,
 header li a:focus {
   text-decoration: none;
+    color: #fff;
 }
 header li a:hover {
   background-color: #0a9dff;
@@ -41,8 +42,6 @@ header li a:hover {
 footer {
   background-color: #D7B84E;
   height: 35px;
-  position: absolute;
-  bottom: 0;
   width: 100%;
 }
 footer div > div {
@@ -58,6 +57,27 @@ footer div > div.copyright {
 div > div > .content {
   margin-top: 25px;
   padding-bottom: 60px;
+}
+
+.Site {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.Site-content {
+    flex: 1;
+}
+
+.menuFileContainer div > .fileList {
+    margin-top: 25px;
+    list-style-type: none;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+    margin: 20px;
 }
 .adminLogin .checkbox input[type="checkbox"],
 .adminLogin .checkbox-inline input[type="checkbox"],
