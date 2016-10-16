@@ -15,7 +15,7 @@
 </head>
 <body class="site">
     <% include Header %>
-<main class="Site-content">
+<main>
     <div class="container-fluid">
         $Layout
     </div>

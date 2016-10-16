@@ -1,12 +1,68 @@
-header {
-  background-color: #000;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    z-index: 100;
+    overflow-x: hidden;
 }
-header .header {
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body main {
+    /* Margin bottom by footer height */
+    margin-bottom: 35px;
+}
+
+header #custom-bootstrap-menu.navbar-default {
   border-bottom: 10px solid #D7B84E;
+    margin-bottom: 10px;
+    font-size: 20px;
+    background-color: #000000;
+    border-bottom-width: 1px;
+}
+
+header #custom-bootstrap-menu.navbar-default .navbar-nav > li > a {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+header #custom-bootstrap-menu.navbar-default .navbar-nav > li > a:hover,
+header #custom-bootstrap-menu.navbar-default .navbar-nav > li > a:focus {
+    color: #ffffff;
+    background-color: #0071BC;
+}
+
+header #custom-bootstrap-menu.navbar-default .navbar-nav > .active > a,
+header #custom-bootstrap-menu.navbar-default .navbar-nav > .active > a:hover,
+header #custom-bootstrap-menu.navbar-default .navbar-nav > .active > a:focus {
+    color: #ffffff;
+    background-color: #0071BC;
+}
+
+header #custom-bootstrap-menu.navbar-default .navbar-toggle {
+    border-color: #0071BC;
+}
+
+header #custom-bootstrap-menu.navbar-default .navbar-toggle:hover,
+header #custom-bootstrap-menu.navbar-default .navbar-toggle:focus {
+    background-color: #0071BC;
+}
+
+header #custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar {
+    background-color: #0071BC;
+}
+
+header #custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
+header #custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #000000;
 }
 header .bannerHolder {
-  height: 410px;
+    height: 30vh;
   border-bottom: 10px solid #D7B84E;
+    z-index: 1000;
 }
 header div > div > nav > ul {
   list-style-type: none;
@@ -15,34 +71,12 @@ header div > div > nav > ul {
   overflow: hidden;
   font-size: 20px;
 }
-header li {
-  float: left;
-    width: 20%;
-}
-header li.active {
-  background-color: #0071BC;
-}
-header li a {
-  text-align: center;
-  display: block;
-  height: 80px;
-  line-height: 80px;
-  color: white;
-  text-decoration: none;
-}
-header li a:hover,
-header li a:visited,
-header li a:focus {
-  text-decoration: none;
-    color: #fff;
-}
-header li a:hover {
-  background-color: #0a9dff;
-}
 footer {
   background-color: #D7B84E;
   height: 35px;
   width: 100%;
+    position: absolute;
+    bottom: 0;
 }
 footer div > div {
   text-align: center;
@@ -58,22 +92,10 @@ div > div > .content {
   margin-top: 25px;
   padding-bottom: 60px;
 }
-
-.Site {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-}
-
-.Site-content {
-    flex: 1;
-}
-
 .menuFileContainer div > .fileList {
     margin-top: 25px;
     list-style-type: none;
 }
-
 #map {
     height: 400px;
     width: 100%;
@@ -83,9 +105,15 @@ div > div > .content {
 .adminLogin .checkbox-inline input[type="checkbox"],
 .adminLogin .radio input[type="radio"],
 .adminLogin .radio-inline input[type="radio"] {
-  margin-left: 0px;
+    margin-left: 0;
 }
 #OpeningHoursBody {
   display: none;
   float: right;
+}
+
+@media only screen and (max-width: 767px) {
+    header div > div > nav > ul {
+        font-size: 14px;
+    }
 }

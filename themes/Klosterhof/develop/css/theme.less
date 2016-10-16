@@ -25,17 +25,67 @@
 //Header Font: Trajan Pro
 //Content Font: Lato Light
 
+html, body {
+  margin: 0;
+  padding: 0;
+  z-index: 100;
+  overflow-x: hidden;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body main {
+  /* Margin bottom by footer height */
+  margin-bottom: @footer-height;
+}
+
 // Header
 header {
-  background-color: #000;
-
-  .header {
+  // Nav
+  #custom-bootstrap-menu.navbar-default {
     border-bottom: 10px solid @yellow;
+    margin-bottom: 10px;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 1);
+    border-bottom-width: 1px;
+  }
+  #custom-bootstrap-menu.navbar-default .navbar-nav > li > a {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(0, 0, 0, 1);
+  }
+  #custom-bootstrap-menu.navbar-default .navbar-nav > li > a:hover,
+  #custom-bootstrap-menu.navbar-default .navbar-nav > li > a:focus {
+    color: rgba(255, 255, 255, 1);
+    background-color: @blue;
+  }
+  #custom-bootstrap-menu.navbar-default .navbar-nav > .active > a,
+  #custom-bootstrap-menu.navbar-default .navbar-nav > .active > a:hover,
+  #custom-bootstrap-menu.navbar-default .navbar-nav > .active > a:focus {
+    color: rgba(255, 255, 255, 1);
+    background-color: @blue;
+  }
+  #custom-bootstrap-menu.navbar-default .navbar-toggle {
+    border-color: @blue;
+  }
+  #custom-bootstrap-menu.navbar-default .navbar-toggle:hover,
+  #custom-bootstrap-menu.navbar-default .navbar-toggle:focus {
+    background-color: @blue;
+  }
+  #custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar {
+    background-color: @blue;
+  }
+  #custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
+  #custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #000000;
   }
 
   .bannerHolder{
-    height: 410px;
+    height: 30vh;
     border-bottom: 10px solid @yellow;
+    z-index: 1000;
   }
 
   div > div > nav > ul {
@@ -46,32 +96,32 @@ header {
       font-size: 20px;
     }
 
-    li {
-      float: left;
-      width: 20%;
-
-      &.active{
-        background-color: @blue;
-      }
-
-      a {
-        text-align: center;
-        display: block;
-        height: 80px;
-        line-height: 80px;
-        color: white;
-        text-decoration: none;
-
-        &:hover, &:visited, &:focus{
-          text-decoration: none;
-          color: #fff;
-        }
-
-        &:hover{
-          background-color: lighten(@blue, 15%);
-        }
-      }
-    }
+  //li {
+  //  float: left;
+  //  width: 20%;
+  //
+  //  &.active{
+  //    background-color: @blue;
+  //  }
+  //
+  //  a {
+  //    text-align: center;
+  //    display: block;
+  //    height: 80px;
+  //    line-height: 80px;
+  //    color: white;
+  //    text-decoration: none;
+  //
+  //    &:hover, &:visited, &:focus{
+  //      text-decoration: none;
+  //      color: #fff;
+  //    }
+  //
+  //    &:hover{
+  //      background-color: lighten(@blue, 15%);
+  //    }
+  //  }
+  //}
 }
 
 // Footer
@@ -79,10 +129,12 @@ footer{
   background-color: @yellow;
   height: @footer-height;
   width: 100%;
+  position: absolute;
+  bottom: 0;
 
   div > div{
     text-align: center;
-    line-height: 35px;
+    line-height: @footer-height;
 
     &.impressum{
       font-size: 20px;
@@ -97,16 +149,6 @@ footer{
 div > div > .content{
   margin-top: 25px;
   padding-bottom: @footer-height + 25px;
-}
-
-.Site {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
-
-.Site-content {
-  flex: 1;
 }
 
 // Menu
@@ -133,7 +175,7 @@ div > div > .content{
   .checkbox-inline input[type="checkbox"],
   .radio input[type="radio"],
   .radio-inline input[type="radio"] {
-    margin-left: 0px;
+    margin-left: 0;
   }
 }
 
@@ -142,3 +184,10 @@ div > div > .content{
   float: right;
 }
 
+@media @smartphone {
+  header {
+    div > div > nav > ul {
+      font-size: 14px;
+    }
+  }
+}
