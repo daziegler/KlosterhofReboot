@@ -1,6 +1,6 @@
 <% if $DownloadableMenus %>
     <div class="row menuFileContainer">
-        <div class="col-md-offset-3 col-md-3">
+        <div class="col-md-offset-2 col-md-3">
             <ul class="fileList">
                 <% loop $DownloadableMenus %>
                     <li>

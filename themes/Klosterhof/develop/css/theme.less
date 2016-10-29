@@ -42,7 +42,6 @@ html {
 body main {
   /* Margin bottom by footer height */
   margin-bottom: @footer-height;
-  margin-top: @header-height + 15px;
 }
 
 a#impressum {
@@ -115,6 +114,18 @@ header {
     }
 }
 
+.subHeader {
+  @subheaderHeight: 200px;
+  background-color: @lightgrey;
+  margin-top: @header-height;
+  height: @subheaderHeight;
+  h1 {
+    line-height: @subheaderHeight;
+    vertical-align: center;
+    font-size: 50px;
+  }
+}
+
 .bannerHolder {
   margin-top: @header-height;
   height: 30vh;
@@ -157,6 +168,7 @@ div > div > .content{
   div > .fileList {
     margin-top: 25px;
     list-style-type: none;
+    padding-left: 0;
   }
 }
 
