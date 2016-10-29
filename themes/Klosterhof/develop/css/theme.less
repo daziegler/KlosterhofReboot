@@ -44,7 +44,6 @@ html {
 body main {
   /* Margin bottom by footer height */
   margin-bottom: @footer-height;
-  margin-top: @header-height + 15px;
 }
 
 a#impressum {
@@ -60,6 +59,12 @@ a#impressum {
   &:active {
     color: #000;
     text-decoration: none;
+  }
+}
+
+#toggleOpeningHours {
+  &:active, &:focus {
+    background-color: transparent !important;
   }
 }
 
@@ -111,11 +116,30 @@ header {
     }
 }
 
+.subHeader {
+  @subheaderHeight: 200px;
+  background-color: @lightgrey;
+  margin-top: @header-height;
+  height: @subheaderHeight;
+  h1 {
+    line-height: @subheaderHeight;
+    vertical-align: center;
+    font-size: 50px;
+  }
+}
+
 .bannerHolder {
   margin-top: @header-height;
-  height: 30vh;
+  height: 40vh;
   border-bottom: 10px solid @yellow;
   z-index: 1000;
+  h1 {
+    text-align: center;
+    line-height: 40vh;
+    vertical-align: center;
+    font-size: 75px;
+    color: #fff;
+  }
 }
 
 // Footer
@@ -153,6 +177,7 @@ div > div > .content{
   div > .fileList {
     margin-top: 25px;
     list-style-type: none;
+    padding-left: 0;
   }
 }
 
