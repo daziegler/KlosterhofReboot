@@ -16,9 +16,20 @@
     <img src="$LocationImage.FillMax(400,300).URL">
 <% end_if %>
 <div class="row">
-    <div class="col-md-offset-3 col-md-6">
+    <div class="col-md-3 col-md-6">
+        <div class="icon-cont">
+
+        <img id="icon-con" style="height: 80px; width:80px;"  src="$Themedir/images/mobile.png">
+        <img id="icon-cont" style="height: 80px; width:80px;" style="height: 80px; width:80px;"  src="$Themedir/images/needle.png">
+        <img id="icon-cont" style="height: 80px; width:80px;" src="$Themedir/images/at.png">
+        <div id="icos" style="height: 80px; width:80px; background-image: url('$Themedir/images/at.png'); background-repeat:no-repeat;"></div>
+        </div>
+    </div>
+
+    <div class="col-md-3 col-md-6">
         <div id="map"></div>
     </div>
+
 </div>
 
 <script async defer

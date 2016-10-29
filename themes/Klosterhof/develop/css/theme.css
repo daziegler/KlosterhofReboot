@@ -1,92 +1,88 @@
 html,
 body {
-    margin: 0;
-    padding: 0;
-    z-index: 100;
-    overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  z-index: 100;
+  overflow-x: hidden;
 }
 html {
-    position: relative;
-    min-height: 100%;
+  position: relative;
+  min-height: 100%;
 }
 body main {
-    /* Margin bottom by footer height */
-    margin-bottom: 35px;
-    margin-top: 70px;
+  /* Margin bottom by footer height */
+  margin-bottom: 35px;
+  margin-top: 70px;
 }
-
 a#impressum {
-    color: #000;
-    text-decoration: none;
+  color: #000;
+  text-decoration: none;
 }
-
 a#impressum:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
-
 a#impressum:visited {
-    color: #000;
-    text-decoration: none;
+  color: #000;
+  text-decoration: none;
 }
-
 a#impressum:active {
-    color: #000;
-    text-decoration: none;
+  color: #000;
+  text-decoration: none;
 }
 header #custom-bootstrap-menu.navbar-default {
-    border-bottom: 5px solid #D7B84E;
-    margin-bottom: 10px;
-    font-size: 20px;
-    background-color: #000000;
+  border-bottom: 5px solid #D7B84E;
+  margin-bottom: 10px;
+  font-size: 20px;
+  background-color: #000000;
 }
 header #custom-bootstrap-menu.navbar-default .navbar-nav > li > a {
-    color: #ffffff;
-    background-color: #000000;
+  color: #ffffff;
+  background-color: #000000;
 }
 header #custom-bootstrap-menu.navbar-default .navbar-nav > li > a:hover,
 header #custom-bootstrap-menu.navbar-default .navbar-nav > li > a:focus {
-    color: #ffffff;
-    background-color: #0071BC;
+  color: #ffffff;
+  background-color: #0071BC;
 }
 header #custom-bootstrap-menu.navbar-default .navbar-nav > .active > a,
 header #custom-bootstrap-menu.navbar-default .navbar-nav > .active > a:hover,
 header #custom-bootstrap-menu.navbar-default .navbar-nav > .active > a:focus {
-    color: #ffffff;
-    background-color: #0071BC;
+  color: #ffffff;
+  background-color: #0071BC;
 }
 header #custom-bootstrap-menu.navbar-default .navbar-toggle {
-    border-color: #0071BC;
+  border-color: #0071BC;
 }
 header #custom-bootstrap-menu.navbar-default .navbar-toggle:hover,
 header #custom-bootstrap-menu.navbar-default .navbar-toggle:focus {
-    background-color: #0071BC;
+  background-color: #0071BC;
 }
 header #custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar {
-    background-color: #0071BC;
+  background-color: #0071BC;
 }
 header #custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
 header #custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
-    background-color: #000000;
+  background-color: #000000;
 }
 header div > div > nav > ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  font-size: 20px;
+  font-size: 15px;
 }
 .bannerHolder {
-    margin-top: 55px;
-    height: 30vh;
-    border-bottom: 10px solid #D7B84E;
-    z-index: 1000;
+  margin-top: 55px;
+  height: 30vh;
+  border-bottom: 10px solid #D7B84E;
+  z-index: 1000;
 }
 footer {
   background-color: #D7B84E;
   height: 35px;
   width: 100%;
-    position: absolute;
-    bottom: 0;
+  position: absolute;
+  bottom: 0;
 }
 footer div > div {
   text-align: center;
@@ -103,35 +99,35 @@ div > div > .content {
   padding-bottom: 60px;
 }
 .menuFileContainer div > .fileList {
-    margin-top: 25px;
-    list-style-type: none;
+  margin-top: 25px;
+  list-style-type: none;
 }
 #map {
-    height: 400px;
-    width: 100%;
-    margin: 20px;
+  height: 400px;
+  width: 100%;
+  margin: 20px;
 }
 .adminLogin .checkbox input[type="checkbox"],
 .adminLogin .checkbox-inline input[type="checkbox"],
 .adminLogin .radio input[type="radio"],
 .adminLogin .radio-inline input[type="radio"] {
-    margin-left: 0;
+  margin-left: 0;
 }
 #openingHoursBody {
   display: none;
-    position: absolute;
-    right: 0;
-    top: 50px;
-    z-index: 9999;
-    border: 1px solid #000;
-    border-radius: 5px;
-    padding: 5px;
-    background-color: #fff;
-    width: 300px;
-    height: auto;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  z-index: 9999;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #fff;
+  width: 300px;
+  height: auto;
 }
 @media only screen and (max-width: 767px) {
-    header div > div > nav > ul {
-        font-size: 14px;
-    }
+  header div > div > nav > ul {
+    font-size: 14px;
+  }
 }

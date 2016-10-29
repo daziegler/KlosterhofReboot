@@ -33,7 +33,7 @@ ErrorDocument 500 /assets/error-500.html
 	RewriteEngine On
 #	RewriteBase '/KlosterhofReboot'
 
-	
+
 
 	# Deny access to potentially sensitive files and folders
 	RewriteRule ^vendor(/|$) - [F,L,NC]
