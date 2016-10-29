@@ -9,6 +9,7 @@
 @yellow: #D7B84E;
 @blue: #0071BC;
 
+@header-height: 55px;
 @footer-height: 35px;
 
 .space-out(@min, @max) {
@@ -46,11 +47,10 @@ body main {
 header {
   // Nav
   #custom-bootstrap-menu.navbar-default {
-    border-bottom: 10px solid @yellow;
+    border-bottom: 5px solid @yellow;
     margin-bottom: 10px;
     font-size: 20px;
     background-color: rgba(0, 0, 0, 1);
-    border-bottom-width: 1px;
   }
   #custom-bootstrap-menu.navbar-default .navbar-nav > li > a {
     color: rgba(255, 255, 255, 1);
@@ -82,12 +82,6 @@ header {
     background-color: #000000;
   }
 
-  .bannerHolder{
-    height: 30vh;
-    border-bottom: 10px solid @yellow;
-    z-index: 1000;
-  }
-
   div > div > nav > ul {
       list-style-type: none;
       margin: 0;
@@ -95,33 +89,13 @@ header {
       overflow: hidden;
       font-size: 20px;
     }
+}
 
-  //li {
-  //  float: left;
-  //  width: 20%;
-  //
-  //  &.active{
-  //    background-color: @blue;
-  //  }
-  //
-  //  a {
-  //    text-align: center;
-  //    display: block;
-  //    height: 80px;
-  //    line-height: 80px;
-  //    color: white;
-  //    text-decoration: none;
-  //
-  //    &:hover, &:visited, &:focus{
-  //      text-decoration: none;
-  //      color: #fff;
-  //    }
-  //
-  //    &:hover{
-  //      background-color: lighten(@blue, 15%);
-  //    }
-  //  }
-  //}
+.bannerHolder {
+  margin-top: @header-height;
+  height: 30vh;
+  border-bottom: 10px solid @yellow;
+  z-index: 1000;
 }
 
 // Footer

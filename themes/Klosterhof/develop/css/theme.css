@@ -5,64 +5,48 @@ body {
     z-index: 100;
     overflow-x: hidden;
 }
-
 html {
     position: relative;
     min-height: 100%;
 }
-
 body main {
     /* Margin bottom by footer height */
     margin-bottom: 35px;
 }
-
 header #custom-bootstrap-menu.navbar-default {
-  border-bottom: 10px solid #D7B84E;
+    border-bottom: 5px solid #D7B84E;
     margin-bottom: 10px;
     font-size: 20px;
     background-color: #000000;
-    border-bottom-width: 1px;
 }
-
 header #custom-bootstrap-menu.navbar-default .navbar-nav > li > a {
     color: #ffffff;
     background-color: #000000;
 }
-
 header #custom-bootstrap-menu.navbar-default .navbar-nav > li > a:hover,
 header #custom-bootstrap-menu.navbar-default .navbar-nav > li > a:focus {
     color: #ffffff;
     background-color: #0071BC;
 }
-
 header #custom-bootstrap-menu.navbar-default .navbar-nav > .active > a,
 header #custom-bootstrap-menu.navbar-default .navbar-nav > .active > a:hover,
 header #custom-bootstrap-menu.navbar-default .navbar-nav > .active > a:focus {
     color: #ffffff;
     background-color: #0071BC;
 }
-
 header #custom-bootstrap-menu.navbar-default .navbar-toggle {
     border-color: #0071BC;
 }
-
 header #custom-bootstrap-menu.navbar-default .navbar-toggle:hover,
 header #custom-bootstrap-menu.navbar-default .navbar-toggle:focus {
     background-color: #0071BC;
 }
-
 header #custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar {
     background-color: #0071BC;
 }
-
 header #custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
 header #custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
     background-color: #000000;
-}
-header .bannerHolder {
-    height: 30vh;
-  border-bottom: 10px solid #D7B84E;
-    z-index: 1000;
 }
 header div > div > nav > ul {
   list-style-type: none;
@@ -70,6 +54,13 @@ header div > div > nav > ul {
   padding: 0;
   overflow: hidden;
   font-size: 20px;
+}
+
+.bannerHolder {
+    margin-top: 55px;
+    height: 30vh;
+    border-bottom: 10px solid #D7B84E;
+    z-index: 1000;
 }
 footer {
   background-color: #D7B84E;
@@ -111,7 +102,6 @@ div > div > .content {
   display: none;
   float: right;
 }
-
 @media only screen and (max-width: 767px) {
     header div > div > nav > ul {
         font-size: 14px;

@@ -6,7 +6,7 @@
 <html lang="de"> <!--<![endif]-->
 <head>
     <% base_tag %>
-    <link rel="shortcut icon" href="$ThemeDir/favicon.ico" />
+    <link rel="shortcut icon" href="$ThemeDir/favicon.ico"/>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
@@ -15,11 +15,16 @@
 </head>
 <body class="site">
     <% include Header %>
+
 <main>
+    <div class="row">
+        <div class="bannerHolder" style="background-image: url($BannerImage.URL)"></div>
+    </div>
     <div class="container-fluid">
         $Layout
     </div>
 </main>
+
     <% include Footer %>
 </body>
 </html>
