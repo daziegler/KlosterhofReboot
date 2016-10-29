@@ -4,7 +4,7 @@
             <ul class="fileList">
                 <% loop $DownloadableMenus %>
                     <li>
-                        <a href="$BaseURL/$Filename">$Title</a>
+                        <a href="$BaseURL$Filename">$Title</a>
                     </li>
                 <% end_loop %>
             </ul>
