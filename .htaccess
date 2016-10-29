@@ -1,7 +1,3 @@
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^mysite\.co\.uk$ [NC]
-RewriteRule ^(.*)$ http://www.mysite.co.uk/$1 [R=301,L]
-
 ### SILVERSTRIPE START ###
 
 # Deny access to templates (but allow from localhost)
