@@ -33,17 +33,16 @@ ErrorDocument 500 /assets/error-500.html
 	RewriteEngine On
 	RewriteBase '/KlosterhofReboot'
 
-	
-
 	# Deny access to potentially sensitive files and folders
-	RewriteRule ^vendor(/|$) - [F,L,NC]
-	RewriteRule silverstripe-cache(/|$) - [F,L,NC]
-	RewriteRule composer\.(json|lock) - [F,L,NC]
+    RewriteRule ^vendor(/|$) - [F,L,NC]
+    RewriteRule silverstripe-cache(/|$) - [F,L,NC]
+    RewriteRule composer\.(json|lock) - [F,L,NC]
 
-	# Process through SilverStripe if no file with the requested name exists.
-	# Pass through the original path as a query parameter, and retain the existing parameters.
-	RewriteCond %{REQUEST_URI} ^(.*)$
-	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteRule .* framework/main.php?url=%1 [QSA]
+    # Process through SilverStripe if no file with the requested name exists.
+    # Pass through the original path as a query parameter, and retain the existing parameters.
+    RewriteCond %{REQUEST_URI} ^(.*)$
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule .* framework/main.php?url=%1 [QSA]
 </IfModule>
 ### SILVERSTRIPE END ###
