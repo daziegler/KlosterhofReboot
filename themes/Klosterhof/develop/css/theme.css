@@ -14,6 +14,25 @@ body main {
     margin-bottom: 35px;
     margin-top: 70px;
 }
+
+a#impressum {
+    color: #000;
+    text-decoration: none;
+}
+
+a#impressum:hover {
+    text-decoration: underline;
+}
+
+a#impressum:visited {
+    color: #000;
+    text-decoration: none;
+}
+
+a#impressum:active {
+    color: #000;
+    text-decoration: none;
+}
 header #custom-bootstrap-menu.navbar-default {
     border-bottom: 5px solid #D7B84E;
     margin-bottom: 10px;
@@ -98,7 +117,6 @@ div > div > .content {
 .adminLogin .radio-inline input[type="radio"] {
     margin-left: 0;
 }
-
 #openingHoursBody {
   display: none;
     position: absolute;

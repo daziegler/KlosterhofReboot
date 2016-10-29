@@ -4,7 +4,7 @@
             Copyright: Daniel Ziegler, Layout by Jessica Laxa
         </div>
         <div class="col-md-offset-4 col-md-1 impressum">
-            Impressum
+            <a id="impressum" href="$BaseHref\impressum">Impressum</a>
         </div>
     </div>
 </footer>

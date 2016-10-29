@@ -17,11 +17,6 @@
     <% include Header %>
 
 <main>
-    <% if $BannerImage %>
-        <div class="row">
-            <div class="bannerHolder" style="background-image: url($BannerImage.URL)"></div>
-        </div>
-    <% end_if %>
     <div class="container-fluid">
         $Layout
     </div>
