@@ -2,10 +2,10 @@
  * Created by Daniel on 18.07.2016.
  */
 
-$("#toggleOpeningHours").click(
-    function(){
-    $("#OpeningHoursBody").toggle();
-});
+$("#toggleOpeningHours").click(function () {
+        $("#openingHoursBody").slideToggle(300);
+    }
+);
 
 function initMap() {
     var uluru = {lat: 48.7665708, lng: 13.0292092};

@@ -12,6 +12,7 @@ html {
 body main {
     /* Margin bottom by footer height */
     margin-bottom: 35px;
+    margin-top: 70px;
 }
 header #custom-bootstrap-menu.navbar-default {
     border-bottom: 5px solid #D7B84E;
@@ -55,7 +56,6 @@ header div > div > nav > ul {
   overflow: hidden;
   font-size: 20px;
 }
-
 .bannerHolder {
     margin-top: 55px;
     height: 30vh;
@@ -98,9 +98,19 @@ div > div > .content {
 .adminLogin .radio-inline input[type="radio"] {
     margin-left: 0;
 }
-#OpeningHoursBody {
+
+#openingHoursBody {
   display: none;
-  float: right;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    z-index: 9999;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #fff;
+    width: 300px;
+    height: auto;
 }
 @media only screen and (max-width: 767px) {
     header div > div > nav > ul {

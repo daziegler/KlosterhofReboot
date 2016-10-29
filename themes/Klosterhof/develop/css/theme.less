@@ -10,6 +10,7 @@
 @blue: #0071BC;
 
 @header-height: 55px;
+@header-border-height: 5px;
 @footer-height: 35px;
 
 .space-out(@min, @max) {
@@ -41,13 +42,14 @@ html {
 body main {
   /* Margin bottom by footer height */
   margin-bottom: @footer-height;
+  margin-top: @header-height + 15px;
 }
 
 // Header
 header {
   // Nav
   #custom-bootstrap-menu.navbar-default {
-    border-bottom: 5px solid @yellow;
+    border-bottom: @header-border-height solid @yellow;
     margin-bottom: 10px;
     font-size: 20px;
     background-color: rgba(0, 0, 0, 1);
@@ -153,9 +155,22 @@ div > div > .content{
   }
 }
 
-#OpeningHoursBody {
+#openingHoursBody {
   display: none;
-  float: right;
+
+  position: absolute;
+  right: 0;
+  top: @header-height - @header-border-height;
+
+  z-index: 9999;
+  border: 1px solid #000;
+  border-radius: 5px;
+
+  padding: 5px;
+  background-color: #fff;
+
+  width: 300px;
+  height: auto;
 }
 
 @media @smartphone {

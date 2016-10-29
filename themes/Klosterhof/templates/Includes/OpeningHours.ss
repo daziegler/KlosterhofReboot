@@ -1,4 +1,4 @@
-<div id="OpeningHoursBody">
+<div id="openingHoursBody">
     <h4><%t Misc.OpeningHoursAre "Unsere Öffnungszeiten" %>:</h4>
     <div>
         <div>$SiteConfig.RestaurantTitle</div>
