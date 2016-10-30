@@ -9,6 +9,7 @@
 @yellow: #D7B84E;
 @blue: #0071BC;
 
+
 @header-height: 55px;
 @header-border-height: 5px;
 @footer-height: 35px;
@@ -44,6 +45,8 @@ html {
 body main {
   /* Margin bottom by footer height */
   margin-bottom: @footer-height;
+  font-family: 'Lato',serif;
+  font-size:15px;
 }
 
 a#impressum {
@@ -70,11 +73,14 @@ a#impressum {
 
 // Header
 header {
+  text-transform: uppercase;
+  //@import url('http://fonts.googleapis.com/css?family=Cinzel+Decorative');
+  font-family: 'Trajan Pro',serif;
   // Nav
   #custom-bootstrap-menu.navbar-default {
     border-bottom: @header-border-height solid @yellow;
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 15px;
     background-color: rgba(0, 0, 0, 1);
   }
   #custom-bootstrap-menu.navbar-default .navbar-nav > li > a {
@@ -112,7 +118,7 @@ header {
       margin: 0;
       padding: 0;
       overflow: hidden;
-      font-size: 20px;
+      font-size: 15px;
     }
 }
 
@@ -122,9 +128,10 @@ header {
   margin-top: @header-height;
   height: @subheaderHeight;
   h1 {
+    font-family: 'Trajan Pro',serif;
     line-height: @subheaderHeight;
     vertical-align: center;
-    font-size: 40px;
+    font-size: 35px;
   }
 }
 
@@ -155,7 +162,8 @@ footer{
     line-height: @footer-height;
 
     &.impressum{
-      font-size: 20px;
+      font-family: 'Trajan Pro',serif;
+      font-size: 16px;
     }
     &.copyright{
       font-size: 10px;

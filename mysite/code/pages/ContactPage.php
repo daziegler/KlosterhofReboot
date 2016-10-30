@@ -7,6 +7,13 @@
  * Time: 19:12
  */
 class ContactPage extends Page{
+
+    private static $db =array(
+        'Adress' => 'Varchar',
+        'Email' => 'Varchar',
+        'Telephone' => 'Int'
+    );
+
     private static $has_one = array(
         'LocationImage' => 'Image'
     );
