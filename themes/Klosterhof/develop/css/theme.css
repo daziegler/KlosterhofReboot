@@ -128,7 +128,7 @@ div > div > .content {
 #map {
   height: 350px;
   width: 90%;
-  margin: 0 25px 0 0;
+  margin: 20px 25px 0 0;
 }
 .adminLogin .checkbox input[type="checkbox"],
 .adminLogin .checkbox-inline input[type="checkbox"],
@@ -155,7 +155,7 @@ div > div > .content {
   }
 }
 .contactInfos {
-  margin: 0 0 20px 80px;
+  margin: 10px 0 10px 80px;
 }
 .contactInfos th {
   width: 150px;
@@ -168,7 +168,7 @@ div > div > .content {
 .con-icon {
   width: 100px;
   height: 100px;
-  margin: 10px 10px 0 10px;
+  margin: 20px 20px 0 20px;
   background-repeat: no-repeat;
   background-position: 0 0;
 }
