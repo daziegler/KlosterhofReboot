@@ -32,8 +32,8 @@ html, body {
   padding: 0;
   z-index: 100;
   overflow-x: hidden;
-  width: 100%;
-  height: 100%;
+  width:100%;
+  height:100%;
 }
 
 html {
@@ -117,14 +117,14 @@ header {
 }
 
 .subHeader {
-  @subheaderHeight: 200px;
+  @subheaderHeight: 100px;
   background-color: @lightgrey;
   margin-top: @header-height;
   height: @subheaderHeight;
   h1 {
     line-height: @subheaderHeight;
     vertical-align: center;
-    font-size: 50px;
+    font-size: 40px;
   }
 }
 
@@ -183,9 +183,10 @@ div > div > .content{
 
 // Contact
 #map {
-  height: 400px;
-  width: 100%;
-  margin: 20px;
+  height: 350px;
+  width: 90%;
+  margin:0 25px 0 0;
+
 }
 
 // Admin
@@ -215,9 +216,6 @@ div > div > .content{
   width: 300px;
   height: auto;
 }
-.icon-cont{
-margin-left:90px;
-}
 
 @media @smartphone {
   header {
@@ -227,3 +225,20 @@ margin-left:90px;
   }
 }
 
+.contactInfos{
+  margin:0 0 20px 80px;
+  th{
+    width:150px;
+  }
+  @media @smartphone {
+    margin:0 0 20px 20px;
+  }
+}
+
+.con-icon{
+  width:100px;
+  height:100px;
+  margin:10px 10px 0 10px;
+  background-repeat:no-repeat;
+  background-position:0 0;
+}
