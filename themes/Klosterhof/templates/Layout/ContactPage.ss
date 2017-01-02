@@ -2,42 +2,42 @@
 <div class="row">
     <div class="col-md-6">
         <table class="contactInfos">
-            <tr>
-                <th>
-                    <img class="con-icon" src="$Themedir/images/mobile.png">
-                </th>
-                <td>
-                    <div class="con-des">
-                        <% if $SiteConfig.Email %>
-                            <div>Mail: $SiteConfig.Email</div>
-                        <% end_if %>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <th>
-                    <img class="con-icon" src="$Themedir/images/at.png">
-                </th>
-                <td>
-                    <div class="con-des">
-                        <% if $SiteConfig.Phone %>
-                            <div>Telefon: $SiteConfig.Phone</div>
-                        <% end_if %>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <th>
-                    <img class="con-icon" src="$Themedir/images/needle.png">
-                </th>
-                <td>
-                    <div class="con-des">
-                        <% if $SiteConfig.Address %>
-                            <div>Adresse: $SiteConfig.Address</div>
-                        <% end_if %>
-                    </div>
-                </td>
-            </tr>
+            <% if $SiteConfig.Email %>
+                <tr>
+                    <th>
+                        <img class="con-icon" src="$Themedir/images/at.png">
+                    </th>
+                    <td>
+                        <div class="con-des">
+                            <div>$SiteConfig.Email</div>
+                        </div>
+                    </td>
+                </tr>
+            <% end_if %>
+            <% if $SiteConfig.Phone %>
+                <tr>
+                    <th>
+                        <img class="con-icon" src="$Themedir/images/mobile.png">
+                    </th>
+                    <td>
+                        <div class="con-des">
+                            <div>$SiteConfig.Phone</div>
+                        </div>
+                    </td>
+                </tr>
+            <% end_if %>
+            <% if $SiteConfig.Address %>
+                <tr>
+                    <th>
+                        <img class="con-icon" src="$Themedir/images/needle.png">
+                    </th>
+                    <td>
+                        <div class="con-des">
+                            <div>$SiteConfig.Address</div>
+                        </div>
+                    </td>
+                </tr>
+            <% end_if %>
         </table>
     </div>
 
