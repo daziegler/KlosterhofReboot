@@ -1,110 +1,125 @@
 html,
 body {
-    margin: 0;
-    padding: 0;
-    z-index: 100;
-    overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  z-index: 100;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
 }
 html {
-    position: relative;
-    min-height: 100%;
+  position: relative;
+  min-height: 100%;
 }
 body main {
-    /* Margin bottom by footer height */
-    margin-bottom: 35px;
+  /* Margin bottom by footer height */
+  margin-bottom: 35px;
+  font-family: 'Lato', serif;
+  font-size: 15px;
 }
 a#impressum {
-    color: #000;
-    text-decoration: none;
+  color: #000;
+  text-decoration: none;
 }
 a#impressum:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 a#impressum:visited {
-    color: #000;
-    text-decoration: none;
+  color: #000;
+  text-decoration: none;
 }
 a#impressum:active {
-    color: #000;
-    text-decoration: none;
+  color: #000;
+  text-decoration: none;
 }
 #toggleOpeningHours:active,
 #toggleOpeningHours:focus {
-    background-color: transparent !important;
+  background-color: transparent !important;
+}
+header {
+  text-transform: uppercase;
+  font-family: 'Trajan Pro', serif;
 }
 header #custom-bootstrap-menu.navbar-default {
-    border-bottom: 5px solid #D7B84E;
-    margin-bottom: 10px;
-    font-size: 20px;
-    background-color: #000000;
+  border-bottom: 5px solid #D7B84E;
+  margin-bottom: 10px;
+  font-size: 15px;
+  background-color: #000000;
 }
 header #custom-bootstrap-menu.navbar-default .navbar-nav > li > a {
-    color: #ffffff;
-    background-color: #000000;
+  color: #ffffff;
+  background-color: #000000;
 }
 header #custom-bootstrap-menu.navbar-default .navbar-nav > li > a:hover,
 header #custom-bootstrap-menu.navbar-default .navbar-nav > li > a:focus {
-    color: #ffffff;
-    background-color: #0071BC;
+  color: #ffffff;
+  background-color: #0071BC;
 }
 header #custom-bootstrap-menu.navbar-default .navbar-nav > .active > a,
 header #custom-bootstrap-menu.navbar-default .navbar-nav > .active > a:hover,
 header #custom-bootstrap-menu.navbar-default .navbar-nav > .active > a:focus {
-    color: #ffffff;
-    background-color: #0071BC;
+  color: #ffffff;
+  background-color: #0071BC;
 }
 header #custom-bootstrap-menu.navbar-default .navbar-toggle {
-    border-color: #0071BC;
+  border-color: #0071BC;
 }
 header #custom-bootstrap-menu.navbar-default .navbar-toggle:hover,
 header #custom-bootstrap-menu.navbar-default .navbar-toggle:focus {
-    background-color: #0071BC;
+  background-color: #0071BC;
 }
 header #custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar {
-    background-color: #0071BC;
+  background-color: #0071BC;
 }
 header #custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
 header #custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
-    background-color: #000000;
+  background-color: #000000;
 }
 header div > div > nav > ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  font-size: 20px;
+  font-size: 15px;
 }
-
 .subHeader {
-    background-color: #E6E6E6;
-    margin-top: 55px;
-    height: 200px;
+  background-color: #E6E6E6;
+  margin-top: 55px;
+  height: 100px;
 }
-
 .subHeader h1 {
-    line-height: 200px;
-    vertical-align: center;
-    font-size: 50px;
+  font-family: 'Trajan Pro', serif;
+  line-height: 100px;
+  vertical-align: center;
+  font-size: 35px;
 }
 .bannerHolder {
-    margin-top: 55px;
-    height: 30vh;
-    border-bottom: 10px solid #D7B84E;
-    z-index: 1000;
+  margin-top: 55px;
+  height: 40vh;
+  border-bottom: 10px solid #D7B84E;
+  z-index: 1000;
+}
+.bannerHolder h1 {
+  text-align: center;
+  line-height: 40vh;
+  vertical-align: center;
+  font-size: 75px;
+  color: #fff;
 }
 footer {
   background-color: #D7B84E;
   height: 35px;
   width: 100%;
-    position: absolute;
-    bottom: 0;
+  position: absolute;
+  bottom: 0;
 }
 footer div > div {
   text-align: center;
   line-height: 35px;
 }
 footer div > div.impressum {
-  font-size: 20px;
+  font-family: 'Trajan Pro', serif;
+  font-size: 16px;
 }
 footer div > div.copyright {
   font-size: 10px;
@@ -114,36 +129,54 @@ div > div > .content {
   padding-bottom: 60px;
 }
 .menuFileContainer div > .fileList {
-    margin-top: 25px;
-    list-style-type: none;
-    padding-left: 0;
+  margin-top: 25px;
+  list-style-type: none;
+  padding-left: 0;
 }
 #map {
-    height: 400px;
-    width: 100%;
-    margin: 20px;
+  height: 350px;
+  width: 90%;
+  margin: 20px 25px 0 0;
 }
 .adminLogin .checkbox input[type="checkbox"],
 .adminLogin .checkbox-inline input[type="checkbox"],
 .adminLogin .radio input[type="radio"],
 .adminLogin .radio-inline input[type="radio"] {
-    margin-left: 0;
+  margin-left: 0;
 }
 #openingHoursBody {
   display: none;
-    position: absolute;
-    right: 0;
-    top: 50px;
-    z-index: 9999;
-    border: 1px solid #000;
-    border-radius: 5px;
-    padding: 5px;
-    background-color: #fff;
-    width: 300px;
-    height: auto;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  z-index: 9999;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #fff;
+  width: 300px;
+  height: auto;
 }
 @media only screen and (max-width: 767px) {
-    header div > div > nav > ul {
-        font-size: 14px;
-    }
+  header div > div > nav > ul {
+    font-size: 14px;
+  }
+}
+.contactInfos {
+  margin: 10px 0 10px 80px;
+}
+.contactInfos th {
+  width: 150px;
+}
+@media only screen and (max-width: 767px) {
+  .contactInfos {
+    margin: 0 0 20px 20px;
+  }
+}
+.con-icon {
+  width: 100px;
+  height: 100px;
+  margin: 20px 20px 0 20px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }

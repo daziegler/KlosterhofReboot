@@ -7,6 +7,7 @@
  * Time: 16:28
  */
 class ArticlePage extends Page{
+
     private static $has_many = array(
         'Articles' => 'Article'
     );

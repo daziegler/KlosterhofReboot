@@ -19,6 +19,8 @@ _ss_environment.php
 /themes/Klosterhof/develop/node_modules/
 /reports/
 /siteconfig/
+/themes/Klosterhof/css/vendor.min.css
+/themes/Klosterhof/css/theme.min.css
 
 # ignore IDE folders
 /.idea/

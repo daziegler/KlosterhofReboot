@@ -14,6 +14,9 @@
                     </li>
                 <% end_loop %>
                 <li>
+                    <a href="http://www.abtei-niederaltaich.de/" target="_blank">Abtei</a>
+                </li>
+                <li>
                     <a href="#" id="toggleOpeningHours"><%t Misc.OpeningHours "Öffnungszeiten" %></a>
                 </li>
             </ul>
