@@ -21,7 +21,16 @@
                     <div class="uk-accordion-content">
                         <% if $MenuEntries %>
                             <% loop $MenuEntries %>
-                                <p>$Title - $NicePrice</p>
+                                <p>
+                                    <strong>$Title - $NicePrice</strong>
+
+                                    <% if $AllergenTag %>
+                                        <br/>
+                                        <%loop $AllergenTag %>
+                                            <span class="allergyTag">$Title</span>
+                                        <% end_loop %>
+                                    <% end_if %>
+                                </p>
                                 <% if $Description %>
                                     <div>$Description</div>
                                 <% end_if %>

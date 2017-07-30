@@ -11,6 +11,10 @@ class MenuEntry extends DataObject{
         'MenuCategory' => 'MenuCategory'
     );
 
+    private static $belongs_many_many = array(
+        'AllergenTag' => 'AllergenTag'
+    );
+
     private static $db = array(
         'Title' => 'Varchar',
         'Description' => 'Text',
@@ -44,6 +48,7 @@ class MenuEntry extends DataObject{
         $labels['Title']	    = _t('MenuEntry.Title', 'Name des Gerichts');
         $labels['Description']  = _t('MenuEntry.Description', 'Beschreibung');
         $labels['Price']        = _t('MenuEntry.Price', 'Preis');
+        $labels['AllergenTag'] = _t('MenuEntry.AllergenTag', 'Allergenhinweis');
 
         return $labels;
     }

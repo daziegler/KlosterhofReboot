@@ -133,6 +133,16 @@ div > div > .content {
   list-style-type: none;
   padding-left: 0;
 }
+
+.allergyTag {
+  border: 1px solid #000;
+  border-radius: 5px;
+  background: #D7B84E;
+  margin-right: 5px;
+  padding: 2px 5px;
+  font-weight: 600;
+  font-size: 10px;
+}
 #map {
   height: 350px;
   width: 90%;
